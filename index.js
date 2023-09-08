@@ -9,9 +9,9 @@ app.use(bodyParser.json());
 
 // Hardcoded user data
 const userData = {
-    user_id: 'john_doe_17091999',
-    email: 'john@xyz.com',
-    roll_number: 'ABCD123',
+    user_id: 'pranav_prakash_menon_10112002',
+    email: 'pm1809@srmist.edu.in',
+    roll_number: 'RA2011030010028',
 };
 
 // POST endpoint
