@@ -24,7 +24,18 @@ app.post('/bfhl', (req, res) => {
 
     const numbers = data.filter(item => typeof item === 'number');
     const alphabets = data.filter(item => typeof item === 'string' && item.length === 1);
-    const highest_alphabet = alphabets.length > 0 ? [alphabets.sort()[alphabets.length - 1]] : [];
+    let alpha = alphabets
+    let maxalphabet = ""
+    let val = 0
+    alpha.forEach((ele) => {
+        const asciival = ele.toLowerCase().charCodeAt(0)
+        if (asciival > val) {
+            maxalphabet = ele
+            val = asciival
+        }
+    })
+    const highest_alphabet = [];
+    highest_alphabet.push(maxalphabet)
 
     const response = {
         is_success: true,
